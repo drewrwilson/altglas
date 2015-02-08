@@ -1,6 +1,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Altglas Container Map</title>
     <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./bower_components/leaflet/dist/leaflet.css" />
@@ -20,12 +21,13 @@
         Loading...
       </div>
       <div class="row">
-        <div class="col-xs-6 col-xs-offset-3 text-center" id="main">
-            <h1>Where are the 5 nearest recycling bins in Berlin?</h1>
+        <div class="col-sm-6 col-sm-offset-3 text-center" id="main">
+            <h1>Show 5 nearest Altglass containers in Berlin</h1>
             <div id="location">
               <div class="text-center">
                 <button id="find-btn" name="button" class="btn btn-lg btn-primary">
-                  <i class="fa fa-location-arrow"></i> Yes, find my containers!
+                  <i class="fa fa-location-arrow"></i>
+                   Use my location
                 </button>
                 <div id="example">
                   Or use <a href="#" id="example-location-btn">this example location</a>.
@@ -46,7 +48,12 @@
                  <h2>Results:</h2>
                  <ul id="closest-list" class="fa-ul">
                  </ul>
+                 <div class="text-center">
+                  <button name="button" class="btn btn-primary btn-lg" onClick="window.location.reload()">Try again</button>   
+                 </div>
+
                 </div>
+
               </div>
             </div>
 
