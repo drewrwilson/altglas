@@ -1,0 +1,89 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="./bower_components/leaflet/dist/leaflet.css" />
+		<link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="styles/popup.css" />
+		<link rel="stylesheet" href="styles/filters.css" />
+		<link rel="stylesheet" href="styles/style.css" />
+		<script src="./bower_components/leaflet/dist/leaflet.js"></script>
+		<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="./bower_components/lodash/dist/lodash.min.js"></script>
+		<script src="js/app.js"></script>
+
+		<script type="text/html" id="tooltip_tmpl">
+			<div class="description"><%= stadtplanadresse %></div>
+			<div class="title"><%= standort  %></div>
+			<ul class="containers">
+				<li class="container-brown <% if (braun === "") { %> hidden<% }%>">
+					<span><%= braun %></span>
+				</li>
+				<li class="container-green <% if (gruen === "") { %> hidden<% }%>">
+					<span><%= gruen %></span>
+				</li>
+				<li class="container-white <% if (weiss === "") { %> hidden<% }%>">
+					<span><%= weiss %></span>
+				</li>
+				<li class="container-colored <% if (bunt === "") { %> hidden<% }%>">
+					<span><%= bunt %></span>
+				</li>
+			</ul>
+			<div class="supplier">Aufsteller: <%= aufsteller %></div>
+		</script>
+
+	</head>
+	<body>
+		<div id=map>
+		</div>
+		<div class="about leaflet-bar">
+			<a href="https://github.com/k-nut/altglas" title="Über das Projekt ...">?</a>
+		</div>
+		<div id="filter" class="filters">
+			<h2>Altglas Container in Berlin - zur Zeit nur Charlottenburg Wilmersdorf</h2>
+<p>Noch sind leider nur die Daten für Charlottenburg Wilmersdorf freigegeben. Wenn du selbst Daten anbietest kannst du sie gerne per Pull-Request hinzufügen oder dich per Mail melden. <a href="mailto:altglas@k-nut.eu">altglas@k-nut.eu</a> </p>
+			<p>Hier kannst du einschränken, welche frei zugänglichen Altglascontainer angezeigt werden.</p>
+			<div class="filter-controls">
+				<input type="checkbox" id="brown" /> <label for="brown"> Braunglas </label>
+				<input type="checkbox" id="white" /> <label for="white"> Weißglas </label>
+				<input type="checkbox" id="green" /> <label for="green"> Grünglas </label>
+				<input type="checkbox" id="colored"/> <label for="colored"> Buntglas </label>
+				PLZ: <select id="plz" >
+					<option value="-1">-----</option>
+					<option value="10585">10585</option>
+					<option value="10587">10587</option>
+					<option value="10589">10589</option>
+					<option value="10625">10625</option>
+					<option value="10627">10627</option>
+					<option value="10629">10629</option>
+					<option value="10707">10707</option>
+					<option value="10709">10709</option>
+					<option value="10711">10711</option>
+					<option value="10713">10713</option>
+					<option value="10715">10715</option>
+					<option value="10717">10717</option>
+					<option value="10719">10719</option>
+					<option value="10779">10779</option>
+					<option value="10789">10789</option>
+					<option value="10825">10825</option>
+					<option value="13627">13627</option>
+					<option value="13629">13629</option>
+					<option value="14050">14050</option>
+					<option value="14052">14052</option>
+					<option value="14055">14055</option>
+					<option value="14057">14057</option>
+					<option value="14059">14059</option>
+					<option value="14193">14193</option>
+					<option value="14195">14195</option>
+					<option value="14197">14197</option>
+					<option value="14199">14199</option>
+				</select>
+				Aufsteller: <select id="supplier">
+					<option value="">------</option>
+					<option value="Karl Meyer">Karl Meyer</option>
+					<option value="Berlin Recycling">Berlin Recycling</option>
+				</select>
+			</div>
+		</div>
+
+		</body>
+	</html>
