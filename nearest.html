@@ -20,19 +20,23 @@
         <i class="fa fa-spinner fa-pulse fa-4x"></i> <br>
         Loading...
       </div>
+      <div class="hidden-xs" style="padding-top:50px">
+
+      </div>
       <div class="row">
         <div class="col-sm-6 col-sm-offset-3 text-center" id="main">
-            <h1>Show 5 nearest Altglass containers in Berlin</h1>
+            <h1>Nearest Altglass Containers</h1>
+            <div class="small-text">(Data currently only available in Charlottenburg Wilmersdorf in Berlin)</div>
             <div id="location">
               <div class="text-center">
                 <button id="find-btn" name="button" class="btn btn-lg btn-primary">
-                  <i class="fa fa-location-arrow"></i>
+                  <i class="fa fa-location-arrow fa-spin"></i>
                    Use my location
                 </button>
                 <div id="example">
                   Or use <a href="#" id="example-location-btn">this example location</a>.
                 </div>
-       <div class="small-text">(Data currently only available in Charlottenburg Wilmersdorf neighborhood)</div>
+
 
                <ul class="containers">
                  <li class="container-brown ">!</li>
@@ -45,16 +49,20 @@
             <div class="row">
               <div class="col-md-10 col-md-offset-1">
                 <div id="list" class="hidden text-left">
-                 <h2>Results:</h2>
+                 <h2>5 Nearest:</h2>
                  <ul id="closest-list" class="fa-ul">
                  </ul>
-                 <div class="text-center">
-                  <button name="button" class="btn btn-primary btn-lg" onClick="window.location.reload()">Try again</button>   
+                 <div class="text-center" style="padding-top:15px;">
+                  <button name="button" class="btn btn-primary btn-lg" onClick="window.location.reload()">                  <i class="fa fa-refresh"></i>
+ Try again</button>
                  </div>
 
                 </div>
 
               </div>
+            </div>
+            <div id="footer-kinda">
+              Need more detail? <a href="map.html">See a map of this data</a>.
             </div>
 
           </div>

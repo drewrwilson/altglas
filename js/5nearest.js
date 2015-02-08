@@ -9,7 +9,7 @@ function showList(nearest) {
     });
   } else {
     // if there no nearby one, tell the user that
-    $('#main').html('<i class="fa fa-warning"></i> Either your GPS did not load properly or there are none nearby. Remember this app is currently only available in Charlottenburg Wilmersdorf in Berlin. <br> <button name="button" class="btn btn-primary btn-lg" onClick="window.location.reload()">Try again</button>');
+    $('#main').html('<i class="fa fa-warning"></i> Either your GPS did not load properly or there are none nearby. Remember this app is currently only available in Charlottenburg Wilmersdorf in Berlin. <br> <button name="button" class="btn btn-primary btn-lg" onClick="window.location.reload()"><i class="fa fa-refresh"></i> Try again</button>');
 
   }
 
