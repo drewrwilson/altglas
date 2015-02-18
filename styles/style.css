@@ -43,9 +43,10 @@
 body {
   /*padding-top:50px;*/
   background: url(../img/recycle-yo.gif);
+  /*background: url(../img/altglas-bg-alt.png);*/
 }
 #main {
-  background-color: #eee;
+  background-color: #51D5BC;
   padding:25px;
   border-radius: 5px;
 }
